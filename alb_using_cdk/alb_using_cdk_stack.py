@@ -66,6 +66,7 @@ class AlbUsingCdkStack(Stack):
         
         security_group_1.add_ingress_rule(peer=ec2.Peer.ipv4("0.0.0.0/0"),connection=ec2.Port.tcp(80))
 
+        # my own ip address hard input
         your_ip_address = "75.73.137.183/24"
 
         security_group_1.add_ingress_rule(peer=ec2.Peer.ipv4(your_ip_address),connection=ec2.Port.tcp(22))
